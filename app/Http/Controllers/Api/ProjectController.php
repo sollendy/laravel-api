@@ -11,7 +11,7 @@ class ProjectController extends Controller
     public function index() {
         // restituisce tutti i post nel db
         // $projects = Post::all();
-        $projects = Project::all();
+        $projects = Project::with("type", "technologies")->get();
             // ->orderBy('projects.created_at', 'desc')
             // ->paginate(6);
 
