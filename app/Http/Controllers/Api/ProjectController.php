@@ -20,4 +20,8 @@ class ProjectController extends Controller
             'results' => $projects
         ]);
     }
+
+    public function show($slug) {
+        dd($slug);
+    }
 }
